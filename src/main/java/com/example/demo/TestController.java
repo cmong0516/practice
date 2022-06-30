@@ -16,4 +16,9 @@ public class TestController {
     public String errorTest() {
         throw new RuntimeException();
     }
+
+    @GetMapping("/error-my")
+    public String myError() {
+        throw new MyException();
+    }
 }
