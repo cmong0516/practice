@@ -22,8 +22,8 @@ public class TestController {
         throw new MyException();
     }
 
-    @GetMapping("/error-test")
+    @GetMapping(value = "/error-bad")
     public String badRequest() {
-        throw new MyException();
+        throw new BadRequestException();
     }
 }
