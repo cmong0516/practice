@@ -21,4 +21,9 @@ public class TestController {
     public String myError() {
         throw new MyException();
     }
+
+    @GetMapping("/error-test")
+    public String badRequest() {
+        throw new MyException();
+    }
 }
