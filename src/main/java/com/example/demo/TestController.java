@@ -32,4 +32,9 @@ public class TestController {
     public Integer converterView(@RequestParam Integer data) {
         return data;
     }
+
+    @GetMapping("/ipconverter")
+    public String ipPortToString(@RequestParam String data) {
+        return data;
+    }
 }
