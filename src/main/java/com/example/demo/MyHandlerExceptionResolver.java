@@ -1,9 +1,7 @@
 package com.example.demo;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.ui.Model;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -50,9 +48,6 @@ public class MyHandlerExceptionResolver implements org.springframework.web.servl
                     response.setCharacterEncoding("utf-8");
                     response.getWriter().write(result);
                     return new ModelAndView();
-                }
-                catch (JsonProcessingException e) {
-                    e.printStackTrace();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -25,5 +26,10 @@ public class TestController {
     @GetMapping(value = "/error-bad")
     public String badRequest() {
         throw new BadRequestException();
+    }
+
+    @GetMapping("/converter-view")
+    public Integer converterView(@RequestParam Integer data) {
+        return data;
     }
 }
