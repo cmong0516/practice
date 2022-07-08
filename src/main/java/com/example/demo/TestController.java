@@ -29,12 +29,12 @@ public class TestController {
     }
 
     @GetMapping("/converter-view")
-    public Integer converterView(@RequestParam Integer data) {
+    public IpPort converterView(@RequestParam IpPort data) {
         return data;
     }
 
     @GetMapping("/ipconverter")
-    public String ipPortToString(@RequestParam String data) {
+    public IpPort ipPortToString(@RequestParam IpPort data) {
         return data;
     }
 }
